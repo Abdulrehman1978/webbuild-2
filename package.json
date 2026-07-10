@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "submit-indexnow": "npx tsx scripts/submit-indexnow.ts"
   },
+
   "dependencies": {
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.18.0",

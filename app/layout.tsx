@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { Sora, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -18,10 +19,10 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+// metadataBase ensures all relative OG/Twitter image URLs resolve correctly.
+// Each page exports its own metadata via generateMetadata() from lib/seo.ts.
 export const metadata: Metadata = {
-  title: "Taxzone — Reimagined Financial Compliance Platform",
-  description:
-    "We act as your financial co-founder. Professional GST filing, ITR tax planning, startup registration, and retirement wealth management in Navi Mumbai.",
+  metadataBase: new URL("https://tax-zone.in"),
 };
 
 export default function RootLayout({

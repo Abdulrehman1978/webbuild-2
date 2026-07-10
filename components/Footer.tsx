@@ -19,7 +19,10 @@ export default function Footer() {
     { name: "Client Stories", href: "/client-stories" },
     { name: "Resources", href: "/resources" },
     { name: "Contact", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
   ];
+
 
   return (
     <footer className="bg-obsidian border-t border-white/5 pt-16 pb-8 text-silver no-print w-full mt-auto relative overflow-hidden">

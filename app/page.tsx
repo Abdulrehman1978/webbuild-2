@@ -9,6 +9,26 @@ import GenerationalTimeline from "@/components/GenerationalTimeline";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import ContactForm from "@/components/ContactForm";
+import { generateMetadata as buildMetadata } from "@/lib/seo";
+import { faqs } from "@/lib/faq-data";
+
+export const metadata = buildMetadata({
+  title: "Taxzone — Reimagined Financial Compliance Platform",
+  description:
+    "We act as your financial co-founder. Professional GST filing, ITR tax planning, startup registration, and retirement wealth management in Navi Mumbai.",
+  path: "/",
+});
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 
 export default function Home() {
   const clientTypes = [
@@ -76,7 +96,13 @@ export default function Home() {
 
   return (
     <div className="w-full">
+      {/* FAQPage JSON-LD — server-rendered for Google Rich Results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* SECTION 1: HERO */}
+
       <section className="relative w-full min-h-[90vh] md:min-h-screen flex items-center bg-obsidian pt-28 pb-16 overflow-hidden px-6 md:px-8">
         {/* Background spotlights */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-active/5 rounded-full filter blur-[120px] -z-10" />

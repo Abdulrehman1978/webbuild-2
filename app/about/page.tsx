@@ -72,13 +72,14 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative aspect-[16/10] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <Image
               src="/founder.png"
-              alt="Taxzone platform theme"
+              alt="Satkut Shamim, Founder & CEO of Taxzone, at the Vashi APMC office in Navi Mumbai"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 400px"
               priority
             />
           </div>
+
         </div>
       </section>
 

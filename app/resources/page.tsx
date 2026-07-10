@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
 import InteractiveChecklist from "@/components/InteractiveChecklist";
-import { Calendar, AlertCircle } from "lucide-react";
+import { Calendar, AlertCircle, BookOpen, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/lib/blog-posts";
+
 
 export const metadata = generateMetadata({
   title: "Tax Schedules & Compliance Checklists",
@@ -95,6 +97,57 @@ export default function ResourcesPage() {
           {/* Right Column: Interactive Document Checklist */}
           <div className="lg:col-span-7 w-full">
             <InteractiveChecklist />
+          </div>
+        </div>
+      </section>
+      {/* BLOG ARTICLES HUB */}
+      <section className="bg-slate-dark/20 py-16 px-6 md:px-8 w-full border-t border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-active flex gap-1.5 items-center">
+              <BookOpen className="w-4 h-4" />
+              <span>TAX GUIDES & ARTICLES</span>
+            </span>
+            <h2 className="font-display-brand text-2xl font-bold text-ice-white">
+              Expert Knowledge Base
+            </h2>
+            <p className="text-xs text-silver/80 leading-relaxed max-w-xl">
+              In-depth guides on GST, income tax, and company registration — written by Satkut Shamim with 22+ years of Navi Mumbai practice.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-obsidian border border-white/5 hover:border-emerald-active/30 rounded-2xl p-6 flex flex-col gap-4 transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-emerald-active/5"
+              >
+                <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-active">
+                  <BookOpen className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col gap-2 flex-1">
+                  <h3 className="font-display-brand font-bold text-ice-white text-sm leading-snug group-hover:text-champagne transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs text-silver/70 leading-relaxed line-clamp-3">
+                    {post.description}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
+                  <span className="text-[10px] text-silver/50 uppercase tracking-wider">
+                    {new Date(post.updatedDate ?? post.publishedDate).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </span>
+                  <span className="text-emerald-active flex items-center gap-1 text-xs font-semibold group-hover:gap-2 transition-all">
+                    Read guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
