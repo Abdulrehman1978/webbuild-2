@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
-const SITE_URL = "https://tax-zone.in";
+const SITE_URL = "https://webbuild-2.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: {

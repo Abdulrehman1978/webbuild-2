@@ -22,7 +22,7 @@ const jakarta = Plus_Jakarta_Sans({
 // metadataBase ensures all relative OG/Twitter image URLs resolve correctly.
 // Each page exports its own metadata via generateMetadata() from lib/seo.ts.
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tax-zone.in"),
+  metadataBase: new URL("https://webbuild-2.vercel.app"),
 };
 
 export default function RootLayout({

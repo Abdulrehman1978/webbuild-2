@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <p className="text-silver text-sm md:text-base leading-relaxed">
             Taxzone (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting the privacy of individuals who interact with our website at{" "}
-            <a href="https://tax-zone.in" className="text-emerald-active hover:underline">https://tax-zone.in</a>{" "}
+            <a href="https://webbuild-2.vercel.app" className="text-emerald-active hover:underline">https://webbuild-2.vercel.app</a>{" "}
             and engage with our advisory services. This policy explains what personal information we collect, how we use it, how long we retain it, and your rights.
           </p>
         </div>

@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
           </p>
           <p className="text-silver text-sm md:text-base leading-relaxed">
             Please read these Terms of Service (&quot;Terms&quot;) carefully before using the Taxzone website at{" "}
-            <a href="https://tax-zone.in" className="text-emerald-active hover:underline">https://tax-zone.in</a>{" "}
+            <a href="https://webbuild-2.vercel.app" className="text-emerald-active hover:underline">https://webbuild-2.vercel.app</a>{" "}
             or engaging with our advisory services. By accessing our website or contacting us for services, you agree to be bound by these Terms.
           </p>
         </div>

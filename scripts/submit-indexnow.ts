@@ -18,7 +18,7 @@
  * as IndexNow rate limits apply and unnecessary submissions waste quota.
  */
 
-const SITE_URL = "https://tax-zone.in";
+const SITE_URL = "https://webbuild-2.vercel.app";
 const INDEXNOW_KEY = "a3f9b2c1-d4e5-4f6a-b7c8-d9e0f1a2b3c4";
 const KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`;
 
@@ -46,7 +46,7 @@ const urlList = [
 
 async function submitToIndexNow() {
   const payload = {
-    host: "tax-zone.in",
+    host: "webbuild-2.vercel.app",
     key: INDEXNOW_KEY,
     keyLocation: KEY_LOCATION,
     urlList,

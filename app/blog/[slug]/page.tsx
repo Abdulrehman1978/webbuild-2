@@ -55,20 +55,20 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://tax-zone.in/about",
+      url: "https://webbuild-2.vercel.app/about",
     },
     publisher: {
       "@type": "Organization",
       name: "Taxzone",
-      url: "https://tax-zone.in",
+      url: "https://webbuild-2.vercel.app",
       logo: {
         "@type": "ImageObject",
-        url: "https://tax-zone.in/og-image.jpg",
+        url: "https://webbuild-2.vercel.app/og-image.jpg",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://tax-zone.in/blog/${post.slug}`,
+      "@id": `https://webbuild-2.vercel.app/blog/${post.slug}`,
     },
   };
 
